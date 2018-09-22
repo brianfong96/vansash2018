@@ -1,12 +1,22 @@
-
-p <- "C:/Users/Brian/Downloads/" 
+# path and file names
+p <- "" 
 f <- ""
 
+# variable to plot
+varx <- ''
+vary <- ''
+
+# list of queries here
+q1 <- df$
+
+  
 getwd()
 setwd(p)
+
 df <- read.csv(f)
-t <- df[df$Action=="indirect free kick" & df$player=="Liam Ridgewell",]
-t1 <- t[,c('LocX', 'LocY')]
+t <- df[q1 ,]
+
+t1 <- t[,c(varx, vary)]
 plot(t1)
 
 #rm(variablename)
