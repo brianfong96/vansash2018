@@ -1,8 +1,9 @@
-plotstat <- function(p, f, a, t)
+plotstat <- function(p, f, a, t, gt)
 {
   setwd(p)
-  devtools::install_github("torvaney/ggsoccer")
+  #devtools::install_github("torvaney/ggsoccer")
   library(ggsoccer)
+  library(ggplot2)
   library(dplyr)
   
   df <- read.csv(f, stringsAsFactors = F, header =T)
@@ -35,12 +36,13 @@ plotstat <- function(p, f, a, t)
     theme_pitch() +
     coord_flip(xlim = c(0, 100),
                ylim = c(0, 100)) +
-    ggtitle("Simple shotmap")
+    ggtitle(gt)
 }
 
-pathname <- "/Users/keithchan/Downloads"
+pathname <- "C:/Users/Brian/Downloads/"
 filename <- "WFC_Ortec_MatchDate_2018_Datathon.csv"
 action <- "direct free kick"
 team <- "Vancouver Whitecaps FC"
+gtitle <- paste(action, team, sep = " for ")
 
-plotstat(p=pathname, f=filename, a=action, t=team)
+plotstat(p=pathname, f=filename, a=action, t=team, gt=gtitle)
