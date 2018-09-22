@@ -6,17 +6,14 @@ f <- ""
 varx <- ''
 vary <- ''
 
-# list of queries here
-q1 <- df$
-
-  
 getwd()
 setwd(p)
-
 df <- read.csv(f)
-t <- df[q1 ,]
-
+t <- df[queries]
+t
 t1 <- t[,c(varx, vary)]
+t1
+
 plot(t1)
 
 #rm(variablename)
