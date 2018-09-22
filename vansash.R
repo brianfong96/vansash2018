@@ -39,6 +39,9 @@ plotstat <- function(p, f, a, t, gt)
     ggtitle(gt)
 }
 
+# Enter your path name here to save grief when updating
+# "C:/Users/Brian/Downloads/"
+
 pathname <- "C:/Users/Brian/Downloads/"
 filename <- "WFC_Ortec_MatchDate_2018_Datathon.csv"
 action <- "direct free kick"
